@@ -1,7 +1,7 @@
 public class pattern {
 
     public static void main(String[] args) {
-        pattern16(5);
+        pattern18(5);
     }
      
     // * * *
@@ -270,6 +270,55 @@ public class pattern {
             }
             System.out.println();
             start++;
+        }
+    }
+
+
+
+
+    //        A 
+    //      A B A 
+    //    A B C B A 
+    //  A B C D C B A
+    static void pattern17(int n){
+        for(int i=0 ; i<n ; i++){
+            //space
+            for(int j=0 ; j<n-i-1 ; j++){
+                System.out.print(" ");
+            }
+            //CHARACTERS
+            char start='A';
+            int breakp = (2*i+1)/2  ;
+            for(int j=1 ; j<=(2*i+1) ; j++){
+                System.out.print(start);
+                if(j<=breakp){
+                    start++;
+                }
+                else{
+                    start--;
+                }
+            }
+            //space
+            for(int j=0 ; j<n-i-1 ; j++){
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+
+
+
+    //E
+    //D E
+    //C D E 
+    //B C D E
+    //A B C D E
+    static void pattern18(int n){
+        for(int i=0 ; i<n ; i++){
+            for(char ch = (char)('E' - i); ch<= 'E' ; ch++){
+                System.out.print(ch+" ");
+            }
+            System.out.println();
         }
     }
 
